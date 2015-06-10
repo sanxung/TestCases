@@ -29,7 +29,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with SU2. If not, see <http://www.gnu.org/licenses/>.
 
-import sys,time, os, subprocess, datetime, signal, os.path
+import time, os, subprocess, datetime, os.path
 
 
 class TestCase:
