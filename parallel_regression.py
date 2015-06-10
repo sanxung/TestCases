@@ -29,44 +29,14 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with SU2. If not, see <http://www.gnu.org/licenses/>.
 
-import sys,time, os, subprocess, datetime, signal, os.path
+import sys
 from TestCase import TestCase    
 
 def main():
     '''This program runs SU2 and ensures that the output matches specified values. 
-       This will be used to do nightly checks to make sure nothing is broken. '''
+       This will be used to do checks when code is pushed to github 
+       to make sure nothing is broken. '''
 
-    workdir = os.getcwd()
-
-    # environment variables for SU2
-    os.environ['TEST_HOME'] = '/home/ale11/.cruise/projects/parallel_regression/work'
-    os.environ['SU2_HOME'] = '/home/ale11/.cruise/projects/parallel_regression/work/SU2'
-    os.environ['SU2_RUN'] = '/home/ale11/.cruise/projects/parallel_regression/work/SU2/bin'
-    os.environ['PATH'] = os.environ['PATH'] + ':' + os.environ['SU2_RUN']
-
-    # sync Test Cases repo
-    os.chdir( os.environ['TEST_HOME'] )
-    os.system('git fetch')
-    os.system('git checkout develop')
-    os.system('git pull origin develop')
-
-    # sync SU2 repo
-    os.chdir( os.environ['SU2_HOME'] )
-    os.system('git fetch')
-    os.system('git checkout develop')
-    os.system('git pull origin develop')
-
-    # Build SU2_CFD in parallel using autoconf
-    os.system('./configure --prefix=$SU2_HOME --enable-mpi --with-cc=`which mpicc` --with-cxx=`which mpicxx` CXXFLAGS="-O3"')
-    os.system('make clean')
-    os.system('make install')
-
-    os.chdir(os.environ['SU2_RUN'])
-    if not os.path.exists("./SU2_CFD"):
-        print 'Could not build SU2_CFD'
-        sys.exit(1)
-
-    os.chdir(workdir)  
     test_list = []
 
     ##########################

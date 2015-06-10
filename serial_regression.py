@@ -34,7 +34,7 @@ from TestCase import TestCase
 
 def main():
     '''This program runs SU2 and ensures that the output matches specified values. 
-       This will be used to do checks when code is pushed to git 
+       This will be used to do checks when code is pushed to github 
        to make sure nothing is broken. '''
 
     test_list = []
