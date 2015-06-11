@@ -90,7 +90,6 @@ class TestCase:
                 passed    = False
 
         # Examine the output
-        subprocess.call(['cat', logfilename]) #Added this line.       
         f = open(logfilename,'r')
         output = f.readlines()
         delta_vals = []
@@ -143,6 +142,7 @@ class TestCase:
             print "%s: PASSED"%self.tag
         else:
             print "%s: FAILED"%self.tag
+            subprocess.call(['cat', logfilename]) #Added this line.       
 
         print 'execution command: %s'%command
 
