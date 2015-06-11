@@ -65,8 +65,9 @@ class TestCase:
         self.adjust_iter()
 
         # Assemble the shell command to run SU2
-        logfilename = '%s.log' % os.path.splitext(self.cfg_file)[0]
-        command = "%s %s > %s" % (self.su2_exec, self.cfg_file,logfilename)
+        #logfilename = '%s.log' % os.path.splitext(self.cfg_file)[0]
+        #command = "%s %s > %s" % (self.su2_exec, self.cfg_file,logfilename)
+        command = "%s %s" % (self.su2_exec, self.cfg_file)
 
         # Run SU2
         workdir = os.getcwd()
