@@ -65,9 +65,8 @@ class TestCase:
         self.adjust_iter()
 
         # Assemble the shell command to run SU2
-        #logfilename = '%s.log' % os.path.splitext(self.cfg_file)[0]
-        #command = "%s %s > %s" % (self.su2_exec, self.cfg_file,logfilename)
-        command = "%s %s" % (self.su2_exec, self.cfg_file)
+        logfilename = '%s.log' % os.path.splitext(self.cfg_file)[0]
+        command = "%s %s > %s" % (self.su2_exec, self.cfg_file,logfilename)
 
         # Run SU2
         workdir = os.getcwd()
@@ -91,6 +90,7 @@ class TestCase:
                 passed    = False
 
         # Examine the output
+        subprocess.call(['cat', logfilename]) #Added this line.       
         f = open(logfilename,'r')
         output = f.readlines()
         delta_vals = []
