@@ -2,7 +2,7 @@
 
 ## \file parallel_regression.py
 #  \brief Python script for automated regression testing of SU2 examples
-#  \author A. Aranake, A. Campos, T. Economon, T. Lukaczyk
+#  \author A. Aranake, A. Campos, T. Economon, T. Lukaczyk, S. Padron
 #  \version 3.2.9 "eagle"
 #
 # SU2 Lead Developers: Dr. Francisco Palacios (Francisco.D.Palacios@boeing.com).
