@@ -406,9 +406,9 @@ def main():
 
     pass_list = [ test.run_test() for test in test_list ]
 
-    # Summary of the tests
+    # Tests summary
     print '=================================================================='
-    print 'Tests Summary'
+    print 'Summary of the parallel tests'
     for i, test in enumerate(test_list):
         if (pass_list[i]):
             print '  passed - %s'%test.tag

@@ -138,6 +138,7 @@ class TestCase:
             print "%s: PASSED"%self.tag
         else:
             print "%s: FAILED"%self.tag
+            print 'Output for the failed case'
             subprocess.call(['cat', logfilename])      
 
         print 'execution command: %s'%command
@@ -169,7 +170,7 @@ class TestCase:
         print 'delta_vals: ',
         for j in delta_vals:
             print '%f,'%j,
-        print '\n'
+        print '\n',
         
         print 'test duration: %.2f min'%(running_time/60.0) 
         print '==================== End Test: %s ====================\n'%self.tag
