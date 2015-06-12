@@ -52,7 +52,7 @@ def main():
     channel.su2_exec  = "parallel_computation.py -f"
     channel.timeout   = 1600
     channel.tol       = 0.00001
-#    test_list.append(channel)
+    test_list.append(channel)
 
     # NACA0012 
     naca0012           = TestCase('naca0012')
@@ -74,7 +74,7 @@ def main():
     wedge.su2_exec  = "parallel_computation.py -f"
     wedge.timeout   = 1600
     wedge.tol       = 0.00001
-#    test_list.append(wedge)
+    test_list.append(wedge)
 
     # ONERA M6 Wing
     oneram6           = TestCase('oneram6')
@@ -85,7 +85,7 @@ def main():
     oneram6.su2_exec  = "parallel_computation.py -f"
     oneram6.timeout   = 3200
     oneram6.tol       = 0.00001
-#    test_list.append(oneram6)
+    test_list.append(oneram6)
 
     ##########################
     ###  Compressible N-S  ###
@@ -100,7 +100,7 @@ def main():
     flatplate.su2_exec  = "parallel_computation.py -f"
     flatplate.timeout   = 1600
     flatplate.tol       = 0.00001
-#    test_list.append(flatplate)
+    test_list.append(flatplate)
 
 
     # Laminar cylinder (steady)
@@ -112,7 +112,7 @@ def main():
     cylinder.su2_exec  = "parallel_computation.py -f"
     cylinder.timeout   = 1600
     cylinder.tol       = 0.00001
-#    test_list.append(cylinder)
+    test_list.append(cylinder)
 
     ##########################
     ### Compressible RANS  ###
@@ -127,7 +127,7 @@ def main():
     rae2822_sa.su2_exec  = "parallel_computation.py -f"
     rae2822_sa.timeout   = 1600
     rae2822_sa.tol       = 0.00001
-#    test_list.append(rae2822_sa)
+    test_list.append(rae2822_sa)
     
     # RAE2822 SST
     rae2822_sst           = TestCase('rae2822_sst')
@@ -138,7 +138,7 @@ def main():
     rae2822_sst.su2_exec  = "parallel_computation.py -f"
     rae2822_sst.timeout   = 1600
     rae2822_sst.tol       = 0.00001
-#    test_list.append(rae2822_sst)
+    test_list.append(rae2822_sst)
 
     # Flat plate
     turb_flatplate           = TestCase('turb_flatplate')
@@ -160,7 +160,7 @@ def main():
     turb_oneram6.su2_exec  = "parallel_computation.py -f"
     turb_oneram6.timeout   = 3200
     turb_oneram6.tol       = 0.00001
-#    test_list.append(turb_oneram6)
+    test_list.append(turb_oneram6)
 
     # NACA0012 (SA, FUN3D results: CL=1.0983, CD=0.01242)
     turb_naca0012_sa           = TestCase('turb_naca0012_sa')
@@ -171,7 +171,7 @@ def main():
     turb_naca0012_sa.su2_exec  = "parallel_computation.py -f"
     turb_naca0012_sa.timeout   = 3200
     turb_naca0012_sa.tol       = 0.00001
-#    test_list.append(turb_naca0012_sa)
+    test_list.append(turb_naca0012_sa)
     
     # NACA0012 (SST, FUN3D results: CL=1.0840, CD=0.01253)
     turb_naca0012_sst           = TestCase('turb_naca0012_sst')
@@ -182,7 +182,7 @@ def main():
     turb_naca0012_sst.su2_exec  = "parallel_computation.py -f"
     turb_naca0012_sst.timeout   = 3200
     turb_naca0012_sst.tol       = 0.00001
-#    test_list.append(turb_naca0012_sst)
+    test_list.append(turb_naca0012_sst)
 
     ############################
     ### Incompressible RANS  ###
@@ -197,7 +197,7 @@ def main():
     inc_turb_naca0012.su2_exec  = "parallel_computation.py -f"
     inc_turb_naca0012.timeout   = 1600
     inc_turb_naca0012.tol       = 0.00001
- #   test_list.append(inc_turb_naca0012)
+    test_list.append(inc_turb_naca0012)
 
     #####################################
     ### Cont. adj. compressible Euler ###
@@ -238,7 +238,7 @@ def main():
     contadj_ns_cylinder.su2_exec  = "parallel_computation.py -f"
     contadj_ns_cylinder.timeout   = 1600
     contadj_ns_cylinder.tol       = 0.00001
- #   test_list.append(contadj_ns_cylinder)
+    test_list.append(contadj_ns_cylinder)
 
     # Adjoint laminar naca0012 subsonic
     contadj_ns_naca0012_sub           = TestCase('contadj_ns_naca0012_sub')
@@ -249,7 +249,7 @@ def main():
     contadj_ns_naca0012_sub.su2_exec  = "parallel_computation.py -f"
     contadj_ns_naca0012_sub.timeout   = 1600
     contadj_ns_naca0012_sub.tol       = 0.00001
-  #  test_list.append(contadj_ns_naca0012_sub)
+    test_list.append(contadj_ns_naca0012_sub)
     
     # Adjoint laminar naca0012 transonic
     contadj_ns_naca0012_trans           = TestCase('contadj_ns_naca0012_trans')
@@ -260,7 +260,7 @@ def main():
     contadj_ns_naca0012_trans.su2_exec  = "parallel_computation.py -f"
     contadj_ns_naca0012_trans.timeout   = 1600
     contadj_ns_naca0012_trans.tol       = 0.00001
-#    test_list.append(contadj_ns_naca0012_trans)
+    test_list.append(contadj_ns_naca0012_trans)
 
     #######################################################
     ### Cont. adj. compressible RANS (frozen viscosity) ###
@@ -275,7 +275,7 @@ def main():
     contadj_rans_naca0012.su2_exec  = "parallel_computation.py -f"
     contadj_rans_naca0012.timeout   = 1600
     contadj_rans_naca0012.tol       = 0.00001
- #   test_list.append(contadj_rans_naca0012)
+    test_list.append(contadj_rans_naca0012)
     
     # Adjoint turbulent RAE2822
     contadj_rans_rae2822           = TestCase('contadj_rans_rae822')
@@ -286,7 +286,7 @@ def main():
     contadj_rans_rae2822.su2_exec  = "parallel_computation.py -f"
     contadj_rans_rae2822.timeout   = 1600
     contadj_rans_rae2822.tol       = 0.00001
-#    test_list.append(contadj_rans_rae2822)
+    test_list.append(contadj_rans_rae2822)
 
     #######################################
     ### Cont. adj. incompressible Euler ###
@@ -301,7 +301,7 @@ def main():
     contadj_incomp_NACA0012.su2_exec  = "parallel_computation.py -f"
     contadj_incomp_NACA0012.timeout   = 1600
     contadj_incomp_NACA0012.tol       = 0.00001
-#    test_list.append(contadj_incomp_NACA0012)
+    test_list.append(contadj_incomp_NACA0012)
 
     #####################################
     ### Cont. adj. incompressible N-S ###
@@ -316,7 +316,7 @@ def main():
     contadj_incomp_cylinder.su2_exec  = "parallel_computation.py -f"
     contadj_incomp_cylinder.timeout   = 1600
     contadj_incomp_cylinder.tol       = 0.00001
-#    test_list.append(contadj_incomp_cylinder)
+    test_list.append(contadj_incomp_cylinder)
 
     ######################################
     ### Thermochemical Nonequilibrium  ###
@@ -331,7 +331,7 @@ def main():
     ramc.su2_exec  = "parallel_computation.py -f"
     ramc.timeout   = 1600
     ramc.tol       = 0.00001
-#    test_list.append(ramc)
+    test_list.append(ramc)
 
     ######################################
     ### Moving Wall                    ###
@@ -346,7 +346,7 @@ def main():
     cavity.su2_exec  = "parallel_computation.py -f"
     cavity.timeout   = 1600
     cavity.tol       = 0.00001
-#    test_list.append(cavity)
+    test_list.append(cavity)
 
     # Spinning cylinder
     spinning_cylinder           = TestCase('spinning_cylinder')
@@ -357,7 +357,7 @@ def main():
     spinning_cylinder.su2_exec  = "parallel_computation.py -f"
     spinning_cylinder.timeout   = 1600
     spinning_cylinder.tol       = 0.00001
-#    test_list.append(spinning_cylinder)
+    test_list.append(spinning_cylinder)
 
     ######################################
     ### Unsteady                       ###
@@ -372,7 +372,7 @@ def main():
     square_cylinder.su2_exec  = "parallel_computation.py -f"
     square_cylinder.timeout   = 1600
     square_cylinder.tol       = 0.00001
-#    test_list.append(square_cylinder)
+    test_list.append(square_cylinder)
 
     ######################################
     ### Real_Gas                       ###
@@ -387,7 +387,7 @@ def main():
     edge_VW.su2_exec  = "parallel_computation.py -f"
     edge_VW.timeout   = 1600
     edge_VW.tol       = 0.00001
-#    test_list.append(edge_VW)
+    test_list.append(edge_VW)
 
     # Rarefaction shock wave edge_PPR
     edge_PPR           = TestCase('edge_PPR')
@@ -398,7 +398,7 @@ def main():
     edge_PPR.su2_exec  = "parallel_computation.py -f"
     edge_PPR.timeout   = 1600
     edge_PPR.tol       = 0.00001
-#    test_list.append(edge_PPR)
+    test_list.append(edge_PPR)
 
     ######################################
     ### RUN TESTS                      ###
