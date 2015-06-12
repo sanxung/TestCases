@@ -406,6 +406,15 @@ def main():
 
     pass_list = [ test.run_test() for test in test_list ]
 
+    # Summary of the tests
+    print '=================================================================='
+    print 'Tests Summary'
+    for i, test in enumerate(test_list):
+        if (pass_list[i]):
+            print '  passed - %s'%test.tag
+        else:
+            print '* FAILED - %s'%test.tag
+
     if all(pass_list):
         sys.exit(0)
     else:

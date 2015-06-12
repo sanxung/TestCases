@@ -52,7 +52,7 @@ class TestCase:
 
     def run_test(self):
 
-        print '========== Start Test: %s ==========\n'%self.tag
+        print '==================== Start Test: %s ===================='%self.tag
         passed       = True
         exceed_tol   = False
         timed_out    = False
@@ -171,8 +171,9 @@ class TestCase:
             print '%f,'%j,
         print '\n'
         
-        print 'test duration: %d min'%running_time/60.0 
-        print '========== End Test: %s ==========\n'%self.tag
+        print 'test duration: %.2f min'%(running_time/60.0) 
+        print '==================== End Test: %s ====================\n'%self.tag
+        
         os.chdir(workdir)
         return passed
 
