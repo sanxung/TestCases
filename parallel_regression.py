@@ -223,7 +223,8 @@ def main():
     contadj_oneram6.su2_exec  = "parallel_computation.py -f"
     contadj_oneram6.timeout   = 1600
     contadj_oneram6.tol       = 0.00001
-    test_list.append(contadj_oneram6)
+    #test_list.append(contadj_oneram6)
+    test_list.insert(0,contadj_oneram6)
 
     ###################################
     ### Cont. adj. compressible N-S ###
